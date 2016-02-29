@@ -1,0 +1,29 @@
+
+# Directive to ensure *.rdf files served as appropriate content type,
+# if not present in main apache config
+AddType application/rdf+xml .rdf
+AddType text/turtle .ttl
+
+# Rewrite engine setup
+RewriteEngine On
+RewriteBase /~pharrin2/
+
+
+# Rewrite rules to serve text/turtle content if requested
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^$ pharrin2.ttl [R=303]
+
+
+# Rewrite rules to serve HTML content from the vocabulary URI if requested
+# The ! means "not," and the conditions are connected by an implicit Boolean
+# AND unless the [OR] flag is present.
+RewriteCond %{HTTP_ACCEPT} text/html [OR]
+RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
+RewriteRule ^$ pharrin2.html [R=303]
+
+# Rewrite rules to serve text/turtle content by default
+RewriteRule ^$ pharrin2.ttl [R=303]
+
+
+

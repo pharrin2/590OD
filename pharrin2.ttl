@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> . 
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wped: <http://en.wikipedia.org/wiki/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xref: <http://id.crossref.org/contributor/>.
+
+
+<http://people.lis.illinois.edu/~pharrin2/> a foaf:Person;
+	foaf:familyName "Harrington"@en;
+	foaf:givenName "Patrick"@en;
+	foaf:name "Patrick Harrington"@en;
+	dc:description """Patrick Harrington is a Pre-professional graduate assistant in the
+ office of Content Access Management at the University of Illinois. In that capacity he has
+ contributed to the processing of electronic theses and dissertations, developed original 
+documentation for open source software, and assisted with metadata cleanup in conjunction with the Hathi Trust.
+Currently pursuing his MLS degree, his coursework emphasizes metadata quality and methods of enhancing electronic resource retrieval."""@en;
+	foaf:page <http://orcid.org/0000-0002-4653-2235>;
+	foaf:page <https://musicforcougars.bandcamp.com>;
+	foaf:page <https://orionsbastard.wordpress.com>;
+	foaf:interest wped:Drone_music;
+	foaf:interest wped:American_Primitive_Guitar;
+	foaf:interest wped:Minnesota_Twins.
+
+	
